@@ -50,10 +50,6 @@ esphome:
   project:
     name: "${project_name}"
     version: "${project_version}"
-  platformio_options:
-    board_build.mcu: esp32c3
-    board_build.variant: esp32c3
-    board_build.flash_mode: dio
   on_boot:
     - priority: 600
       then:
@@ -81,6 +77,7 @@ esphome:
 esp32:
   board: esp32-c3-devkitm-1
   flash_size: 4MB
+  flash_mode: dio
   variant: ESP32C3
   framework:
     type: esp-idf
