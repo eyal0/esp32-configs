@@ -50,13 +50,12 @@ esphome:
   project:
     name: "${project_name}"
     version: "${project_version}"
-  platformio_options:
-    board_build.flash_mode: dio
 
 esp32:
   board: esp32dev
   variant: esp32
   flash_size: 8MB
+  flash_mode: dio
   framework:
     type: esp-idf
     version: recommended
